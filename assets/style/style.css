@@ -1,0 +1,97 @@
+body {
+    background: url(https://insidevancouver.ca/wp-content/uploads/2018/06/NicolasCage-550x344.jpg) no-repeat center center fixed;
+    background-size: cover;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;   
+}
+
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+body h1 {
+    background-color: hotpink;
+    text-align: center;
+    font-family: comic sans ms;
+    font-weight: bolder;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 65px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  animation: color-animation 4s linear infinite;
+  --color-1: black;
+  --color-2: white;
+  --color-3: grey;
+  animation: bounce 1.5s ease infinite;
+  border-radius: 20px;
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1) translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1)  translateY(-40px);}
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    58%  { transform: scale(1,1) translateY(-7px); }
+    65%  { transform: scale(1,1) translateY(0);}
+    100% { transform: scale(1,1) translateY(0);}
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%  {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+.cageBtn {
+   font-size: xx-large;
+   font-family: comic sans ms;
+   text-shadow: -1px 1px #ef3550,
+        -2px 2px #f48fb1,
+        -3px 3px #7e57c2,
+        -4px 4px #2196f3,
+        -5px 5px #26c6da,
+        -6px 6px #43a047,
+        -7px 7px #eeff41,
+        -8px 9px #f9a825,
+        -9px 9px #ff5722;
+   text-align: center;
+   margin: auto;
+   display: flex;
+   border-radius: 10px; 
+   animation: fadein 2s;
+   border-color: hotpink;
+   box-shadow: 10px 5px 5px hotpink;
+}
+
+.cageBtn:hover {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVvUzsTSdxWCuvQEiwcTMYRlGyM3YvuD0MFA&usqp=CAU");
+    background-size: cover;
+    text-align: center;
+    padding-left: 30px;
+    width: 400px;
+    height: 220px;
+    padding-bottom: 200px;
+    transform: scale(1.5);
+    transform: rotate(360deg);
+    transition: all 1s ease-in-out 0s;
+    cursor: pointer;
+}
