@@ -36,7 +36,9 @@ function getApi() {
         pickedMovie = "";
         //randomly picks movie from the array
         pickRandomMovie(movies);
-        console.log(pickedMovie);
+        console.log(getReviews());
+
+        getReviewsApi();
     });
 }
 //console.log(movies);
@@ -48,7 +50,43 @@ function pickRandomMovie() {
     nick1El.appendChild(nick2Img)
     movieTitleEl.innerHTML = "<p>" + pickedMovie + "</p>"
     nick2El.appendChild(nickImg)
-    
 }
 //console.log(pickedMovie);
 //getApi();
+
+// Movie review API Section 
+// Function to get URL with random Cage movie and added + signs between words within the movie
+function getReviews() {
+    const copyMovie = pickedMovie.slice();
+    let movie = copyMovie.split(" ").join("+");
+    const apiKey = "eb0884da";
+    const movieURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=" + apiKey;
+    return movieURL;
+}
+
+// Function to fetch movie URL
+let stuff = "";
+let posterEl = document.querySelector('.poster');
+function getReviewsApi() {
+    fetch(getReviews())
+        .then(res => {
+            return res.json();
+    })
+        .then(data => {
+           posterEl.setAttribute("src", data.Poster);
+           // posterEl.appendChild(poster);
+           // Posts plot to list
+           document.getElementById('plot').innerHTML = data.Plot;
+           // Posts year to list
+           document.getElementById('year').innerHTML = data.Year;
+           // Posts genre to list
+           document.getElementById('genre').innerHTML = data.Genre;
+           // Posts movie rating to list
+           document.getElementById('rating').innerHTML = data.Rated;
+           // Posts movie runtime to list
+           document.getElementById('runtime').innerHTML = data.Runtime;
+        })
+} 
+
+// Plot, Poster, Year, Genre, Rated, Runtime
+

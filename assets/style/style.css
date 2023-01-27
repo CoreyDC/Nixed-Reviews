@@ -238,3 +238,7 @@ body h1 {
         transform: rotate(360deg);
     }
 }
+
+#facts {
+    list-style: none;
+}
