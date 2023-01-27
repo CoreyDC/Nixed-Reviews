@@ -8,10 +8,11 @@ var nick2El = document.querySelector(".nick2")
 
 var nickImg = document.createElement("img")
 nickImg.setAttribute("src", "https://toppng.com/public/uploads/thumbnail/icolas-cage-face-png-png-transparent-library-nic-cage-face-11562888750gtnxrtyuum.png")
+nickImg.style.height = "200px"
 
 var nick2Img = document.createElement("img")
-nick2Img.setAttribute("src", "https://toppng.com/public/uploads/thumbnail/icolas-cage-face-png-png-transparent-library-nic-cage-face-11562888750gtnxrtyuum.png")
-
+nick2Img.setAttribute("src", "https://toppng.com/public/uploads/thumbnail/icolas-cage-face-png-png-transparent-library-nic-cage-face-11562888750gtnxrtyuum.png",)
+nick2Img.style.height = "200px"
 
 
 btnClick.addEventListener("click", getApi);
@@ -46,7 +47,7 @@ function pickRandomMovie() {
     pickedMovie = (movies[randomMovie]);
     
     nick1El.appendChild(nick2Img)
-    movieTitleEl.innerHTML = "<p>" + pickedMovie + "</p>"
+    movieTitleEl.innerHTML = " <p> " + pickedMovie + " </p> "
     nick2El.appendChild(nickImg)
     
 }

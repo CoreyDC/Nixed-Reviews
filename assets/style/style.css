@@ -40,7 +40,7 @@ body h1 {
     text-align: center;
     font-family: comic sans ms;
     margin-top: 50px;
-    font-size: 80px;
+    font-size: 70px;
     border-radius: 20px;
     background-color: hotpink;
     margin-left: 10%;
@@ -64,11 +64,11 @@ body h1 {
     text-align: center;
     font-family: comic sans ms;
     margin-top: 50px;
-    font-size: 100px;
+    font-size: 80px;
     border-radius: 20px;
     background-color: hotpink;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 1%;
+    margin-right: 1%;
     text-shadow: -1px 1px #ef3550,
         -2px 2px #f48fb1,
         -3px 3px #7e57c2,
@@ -90,7 +90,7 @@ body h1 {
     }
 
     30% {
-        transform: scale(.9, 1.1) translateY(-40px);
+        transform: scale(.9, 1.1) translateY(-10px);
     }
 
     50% {
@@ -213,28 +213,36 @@ body h1 {
 .cageHead {
     position: absolute;
     animation-name: spin;
+    transition: ease-in-out;
     margin-left: 5%;
-    animation-duration: 2000ms;
+    animation-duration: 1500ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+
 
 }
 
 .cageHead2 {
     position: absolute;
     animation-name: spin;
-    animation-duration: 2000ms;
+    transition: ease-in-out;
+    animation-direction: reverse;
+    animation-duration: 1500ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    margin-left: 85%;
+    margin-left: 82%;
 }
 
 @keyframes spin {
     from {
         transform: rotate(0deg);
+        
     }
 
     to {
         transform: rotate(360deg);
+        
     }
 }
+
+
