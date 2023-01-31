@@ -83,8 +83,6 @@ body h1 {
         -7px 7px #eeff41,
         -8px 9px #f9a825,
         -9px 9px #ff5722;
-    border-style: double;
-    border-color: white;
 
 }
 
@@ -260,10 +258,8 @@ body h1 {
 }
 
 .list-container {
-    position: absolute;
-    left: 5%;
-    top: 120%;
     font-family: comic sans ms;
+    font-size: larger;
     background-color: hotpink;
     padding: 20px 100px 20px 100px;
     border-radius: 20px;
@@ -278,7 +274,12 @@ body h1 {
         -9px 9px #ff5722;
     border-style: double;
     border-color: white;
+    margin-left: 30%;
+    margin-right: 30%;
+}
 
+.list-container h3 {
+    text-align: center;
 }
 
 .poster {
@@ -288,8 +289,6 @@ body h1 {
     width: 500px;
     margin-top: 20px;
     border-radius: 20px;
-    border-style: double;
-    border-color: white;
 }
 
 #facts {
