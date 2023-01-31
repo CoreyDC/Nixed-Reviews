@@ -1,8 +1,8 @@
-## PROJECT 1 - NIXED REVIEWS
+# PROJECT 1 - NIXED REVIEWS
 
-# AS a Nicholas Cage superfan
-# I WANT to pick a Cage movie at random
-# SO THAT we can view how good the movie is rated
+## AS a Nicholas Cage superfan
+## I WANT to pick a Cage movie at random
+## SO THAT we can view how good the movie is rated
 
 Live Link: 
 
