@@ -6,24 +6,32 @@
 
 Live Link: 
 
-##Description
+## Description
+
 Challenge week 6. Try not to judge me on this one I had been working on the project and totally forgot I had to do this. I follow this guide:
 
-##Installation
+## Installation
+
 N/A
 
-##Usage
+## Usage
+
 Pick a city or state and see the current weather
 
-##Credits
+## Credits
+
 N/A
 
-##License
+## License
+
 MIT License
 
-##Badges N/A
+## Badges
 
-##Features
+N/A
+
+## Features
+
 HTML / CSS He-Man Javascript
 
 Uses fetch to pull info from weather API
