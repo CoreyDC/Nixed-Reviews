@@ -34,6 +34,8 @@ body h1 {
     --color-3: grey;
     animation: bounce 1.5s ease infinite;
     border-radius: 20px;
+    border-style: double;
+    border-color: white;
 }
 
 .prequel {
@@ -46,6 +48,8 @@ body h1 {
     background-color: hotpink;
     margin-left: 10%;
     margin-right: 10%;
+    border-style: double;
+    border-color: white;
     text-shadow: -1px 1px #ef3550,
         -2px 2px #f48fb1,
         -3px 3px #7e57c2,
@@ -79,6 +83,9 @@ body h1 {
         -7px 7px #eeff41,
         -8px 9px #f9a825,
         -9px 9px #ff5722;
+    border-style: double;
+    border-color: white;
+
 }
 
 @keyframes bounce {
@@ -252,6 +259,28 @@ body h1 {
     background: transparent;
 }
 
+.list-container {
+    position: absolute;
+    left: 5%;
+    top: 120%;
+    font-family: comic sans ms;
+    background-color: hotpink;
+    padding: 20px 100px 20px 100px;
+    border-radius: 20px;
+    text-shadow: -1px 1px #ef3550,
+        -2px 2px #f48fb1,
+        -3px 3px #7e57c2,
+        -4px 4px #2196f3,
+        -5px 5px #26c6da,
+        -6px 6px #43a047,
+        -7px 7px #eeff41,
+        -8px 9px #f9a825,
+        -9px 9px #ff5722;
+    border-style: double;
+    border-color: white;
+
+}
+
 .poster {
     display: block;
     margin-left: auto;
@@ -259,6 +288,8 @@ body h1 {
     width: 500px;
     margin-top: 20px;
     border-radius: 20px;
+    border-style: double;
+    border-color: white;
 }
 
 #facts {
@@ -277,8 +308,8 @@ body h1 {
     padding-top: 20px;
     padding-bottom: 20px;
     padding: auto;
-    
-    
+
+
 }
 
 #plot {
