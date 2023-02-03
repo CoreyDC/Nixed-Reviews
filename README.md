@@ -1,6 +1,6 @@
 # PROJECT 1 - NIXED REVIEWS
 
-Live Link: 
+Live Link: https://coreydc.github.io/Nixed-Reviews/
 
 ## Description
 
