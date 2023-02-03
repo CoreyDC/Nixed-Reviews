@@ -70,15 +70,15 @@ function getReviewsApi() {
             posterEl.setAttribute("src", data.Poster);
             // posterEl.appendChild(poster);
             // Posts plot to list
-            document.getElementById('plot').innerHTML = data.Plot;
+            document.getElementById('plot').innerHTML = "🌭 " + data.Plot;
             // Posts year to list
-            document.getElementById('year').innerHTML = data.Year;
+            document.getElementById('year').innerHTML = "🌭 " + data.Year;
             // Posts genre to list
-            document.getElementById('genre').innerHTML = data.Genre;
+            document.getElementById('genre').innerHTML = "🌭 " + data.Genre;
             // Posts movie rating to list
-            document.getElementById('rating').innerHTML = data.Rated;
+            document.getElementById('rating').innerHTML = "🌭 " + data.Rated;
             // Posts movie runtime to list
-            document.getElementById('runtime').innerHTML = data.Runtime;
+            document.getElementById('runtime').innerHTML = "🌭 " + data.Runtime;
         })
 }
 //addToButton = document.querySelector('add-btn');
