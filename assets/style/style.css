@@ -304,6 +304,15 @@ body h1 {
     border-radius: 20px;
 }
 
+.next-button {
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: end;
+    border-radius: 5px;
+    background-color: hotpink;
+}
+
 #facts {
     list-style: none;
     text-align: center;

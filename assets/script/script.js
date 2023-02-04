@@ -6,10 +6,13 @@ var movieEl = document.querySelector(".movie")
 var nick1El = document.querySelector(".nick1")
 var nick2El = document.querySelector(".nick2")
 var nickImg = document.createElement("img")
+let reviewCont = document.querySelector("#reviews-container");
+let btnNxt = document.createElement("button");
 nickImg.setAttribute("src", "https://toppng.com/public/uploads/thumbnail/icolas-cage-face-png-png-transparent-library-nic-cage-face-11562888750gtnxrtyuum.png")
 var nick2Img = document.createElement("img")
 nick2Img.setAttribute("src", "https://toppng.com/public/uploads/thumbnail/icolas-cage-face-png-png-transparent-library-nic-cage-face-11562888750gtnxrtyuum.png")
 btnClick.addEventListener("click", getApi);
+btnNxt.addEventListener("click", getApi);
 function getApi() {
     //clears the movies array
     movies = [];
@@ -34,7 +37,9 @@ function getApi() {
             pickRandomMovie(movies);
             console.log(getReviews());
             getReviewsApi();
+            
             watchLater();
+            //nextBtn();
             //storeWatched();
         });
 }
@@ -120,6 +125,16 @@ function watchLater() {
             ulDiv.appendChild(listOf);
         }
     }
+nextBtn();
+function nextBtn() {
+    //let reviewCont = document.querySelector("#reviews-container");
+    //let btnNxt = document.createElement("button");
+    btnNxt.classList.add("next-button");
+    btnNxt.textContent = "Next ->"
+    reviewCont.appendChild(btnNxt);
+}
+    
+
     //console.log(savedMovie);
     /*let ulDiv = document.querySelector(".watched-list");
     let listOf = document.createElement("li");
