@@ -364,6 +364,12 @@ body h1 {
         display: none;
     }
 
+    .next-button {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 50px; 
+    }
+
     body h1 {
         margin-left: 5%;
         margin-right: 5%;
