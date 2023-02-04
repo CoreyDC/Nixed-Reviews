@@ -8,11 +8,12 @@ var nick2El = document.querySelector(".nick2")
 var nickImg = document.createElement("img")
 let reviewCont = document.querySelector("#reviews-container");
 let btnNxt = document.createElement("button");
+
 nickImg.setAttribute("src", "https://toppng.com/public/uploads/thumbnail/icolas-cage-face-png-png-transparent-library-nic-cage-face-11562888750gtnxrtyuum.png")
 var nick2Img = document.createElement("img")
 nick2Img.setAttribute("src", "https://toppng.com/public/uploads/thumbnail/icolas-cage-face-png-png-transparent-library-nic-cage-face-11562888750gtnxrtyuum.png")
 btnClick.addEventListener("click", getApi);
-btnNxt.addEventListener("click", getApi);
+
 function getApi() {
     //clears the movies array
     movies = [];
@@ -35,14 +36,19 @@ function getApi() {
             pickedMovie = "";
             //randomly picks movie from the array
             pickRandomMovie(movies);
-            console.log(getReviews());
+            //console.log(getReviews());
             getReviewsApi();
             
             watchLater();
+            //scrolls to the movieEl
+            document.querySelector(".movie").scrollIntoView({
+                behavior: 'smooth'
+            })
             //nextBtn();
             //storeWatched();
         });
 }
+//btnNxt();
 //console.log(movies);
 function pickRandomMovie() {
     //randomly picks movie from array and puts it in the pickedMovie array
@@ -125,15 +131,16 @@ function watchLater() {
             ulDiv.appendChild(listOf);
         }
     }
-nextBtn();
+    btnNxt.addEventListener("click", getApi);
+//nextBtn();
 function nextBtn() {
-    //let reviewCont = document.querySelector("#reviews-container");
-    //let btnNxt = document.createElement("button");
+
     btnNxt.classList.add("next-button");
     btnNxt.textContent = "Next ->"
     reviewCont.appendChild(btnNxt);
+
 }
-    
+nextBtn();
 
     //console.log(savedMovie);
     /*let ulDiv = document.querySelector(".watched-list");
