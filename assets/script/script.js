@@ -12,8 +12,8 @@ let btnNxt = document.createElement("button");
 nickImg.setAttribute("src", "https://toppng.com/public/uploads/thumbnail/icolas-cage-face-png-png-transparent-library-nic-cage-face-11562888750gtnxrtyuum.png")
 var nick2Img = document.createElement("img")
 nick2Img.setAttribute("src", "https://toppng.com/public/uploads/thumbnail/icolas-cage-face-png-png-transparent-library-nic-cage-face-11562888750gtnxrtyuum.png")
-btnClick.addEventListener("click", getApi);
 
+btnClick.addEventListener("click", getApi);
 function getApi() {
     //clears the movies array
     movies = [];
@@ -60,6 +60,8 @@ function pickRandomMovie() {
 }
 //console.log(pickedMovie);
 //getApi();
+
+
 // Movie review API Section
 // Function to get URL with random Cage movie and added + signs between words within the movie
 function getReviews() {
@@ -69,6 +71,7 @@ function getReviews() {
     const movieURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=" + apiKey;
     return movieURL;
 }
+
 // Function to fetch movie URL
 let stuff = "";
 let posterEl = document.querySelector('.poster');
@@ -78,24 +81,50 @@ function getReviewsApi() {
             return res.json();
         })
         .then(data => {
+            // Posts poster to list
+            if (data.Poster === "N/A") {
+                posterEl.setAttribute("src", "https://toppng.com/public/uploads/thumbnail/icolas-cage-face-png-png-transparent-library-nic-cage-face-11562888750gtnxrtyuum.png")
+            }else{
             posterEl.setAttribute("src", data.Poster);
-            // posterEl.appendChild(poster);
+            }
+
             // Posts plot to list
+            if (data.Plot === "N/A") {
+                document.getElementById('plot').innerHTML = "🌭 " + "Insert sick back story here."
+            }else{
             document.getElementById('plot').innerHTML = "🌭 " + data.Plot;
+            }
+
             // Posts year to list
+            if (data.Year === "N/A") {
+                document.getElementById('year').innerHTML = "🌭 " + "3005"
+            }else{
             document.getElementById('year').innerHTML = "🌭 " + data.Year;
+            }
+
             // Posts genre to list
+            if (data.Genre === "N/A") {
+                document.getElementById('genre').innerHTML = "🌭 " + "Action only."
+            }else{
             document.getElementById('genre').innerHTML = "🌭 " + data.Genre;
+            }
+
             // Posts movie rating to list
+            if (data.Rated === "N/A") {
+                document.getElementById('rating').innerHTML = "🌭 " + "Rad."
+            }else{
             document.getElementById('rating').innerHTML = "🌭 " + data.Rated;
+            }
+
             // Posts movie runtime to list
+            if (data.Runtime === "N/A") {
+                document.getElementById('runtime').innerHTML = "🌭 " + "60 seconds"
+            }else{
             document.getElementById('runtime').innerHTML = "🌭 " + data.Runtime;
+            }
         })
 }
-//addToButton = document.querySelector('add-btn');
-//addToBbutton.addEventListener("click", createList);
-//let movie1 = document.querySelector(".list-of1");
-//let movieArray = [];
+
 let movieList = [];
 function storeWatched() {
     let savedMovie = localStorage.getItem("list-of");
@@ -131,8 +160,8 @@ function watchLater() {
             ulDiv.appendChild(listOf);
         }
     }
-    btnNxt.addEventListener("click", getApi);
-//nextBtn();
+   
+btnNxt.addEventListener("click", getApi);
 function nextBtn() {
 
     btnNxt.classList.add("next-button");
