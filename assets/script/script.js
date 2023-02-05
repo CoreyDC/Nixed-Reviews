@@ -136,7 +136,7 @@ function watchLater() {
 function nextBtn() {
 
     btnNxt.classList.add("next-button");
-    btnNxt.textContent = "Next ->"
+    btnNxt.textContent = "🖱️ NEXT CAGE MASTERPIECE 🖱️"
     reviewCont.appendChild(btnNxt);
 
 }

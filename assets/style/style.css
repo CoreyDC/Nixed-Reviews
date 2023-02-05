@@ -306,11 +306,28 @@ body h1 {
 
 .next-button {
     padding: 5px;
-    margin: 5px;
+    font-size: medium;
+    font-family: comic sans ms;
+    border-color: white;
+    border-style: double;
     display: flex;
     justify-content: end;
-    border-radius: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
     background-color: hotpink;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+.next-button:hover {
+    cursor: pointer;
 }
 
 #facts {
@@ -415,4 +432,10 @@ body h1 {
     .cageBtn:hover {
         width: 330px;
     }
+
+    .next-button {
+        margin: auto;
+        margin-bottom: 20px;
+    }
   }
+
